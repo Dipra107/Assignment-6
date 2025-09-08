@@ -164,8 +164,10 @@ function showDetails(plantId) {
             <p class="text-justify mb-2"><span class="font-semibold">Description:</span> ${data.plants.description}</p>
             <p><i class="fa-solid fa-bangladeshi-taka-sign"></i> <span class="font-semibold">Price:</span> ৳${data.plants.price}</p>
             <p class="mt-2"><i class="fa-solid fa-tag"></i> <span class="font-semibold">Category:</span> ${data.plants.category}</p>
-            <button class="btn bg-gray-800 text-white rounded-3xl w-full mt-2" onclick="document.getElementById('plant-modal').classList.remove('modal-open')">Close</button>
-      `;
+            <div class="flex justify-end mt-4">
+            <button class="btn rounded-3xl" onclick="document.getElementById('plant-modal').classList.remove('modal-open')">Close</button>
+            </div>
+            `;
             const modal = document.getElementById('plant-modal');
             modal.classList.add('modal-open');
         })
