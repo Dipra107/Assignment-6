@@ -66,7 +66,7 @@ function loadPlants(url) {
                             <div class="rounded-3xl bg-green-200 px-3 py-1 text-green-800 text-base md:text-lg">${plant.category}</div>
                             <div class="font-bold text-lg md:text-xl">৳${plant.price}</div>
                         </div>
-                        <div class="card-actions mt-2"><button class="btn bg-green-800 hover:bg-green-900 text-white rounded-3xl w-full text-2xl font-normal" onclick="addToCart('${plant.name}','${plant.price}')"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+                        <div class="card-actions mt-2"><button class="btn bg-green-800 hover:bg-green-900 text-white rounded-3xl w-full text-xl font-normal" onclick="addToCart('${plant.name}','${plant.price}')"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
                         </div>
 
                     </div>
