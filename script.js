@@ -57,13 +57,13 @@ function loadPlants(url) {
                 plantElement.innerHTML = `<div class="card bg-base-100 w-full shadow-sm">
                     <figure class="p-4">
                         <img src="${plant.image}"
-                            alt="Shoes" class="rounded-xl h-100 w-full object-cover " />
+                            alt="Shoes" class="rounded-xl h-100 w-full object-cover" />
                     </figure>
                     <div class="card-body pt-4 pb-6 text-right">
-                        <span class="card-title text-xl md:text-2xl cursor-pointer" onclick="showDetails(${plant.id})">${plant.name}</span>
-                        <span class="text-justify line-clamp-3 text-base md:text-lg">${plant.description}</span>
+                        <span class="card-title text-lg md:text-xl cursor-pointer" onclick="showDetails(${plant.id})">${plant.name}</span>
+                        <span class="text-justify line-clamp-3 text-sm md:text-sm">${plant.description}</span>
                         <div class="flex justify-between mt-4">
-                            <div class="rounded-3xl bg-green-200 px-3 py-1 text-green-800 text-lg md:text-xl">${plant.category}</div>
+                            <div class="rounded-3xl bg-green-200 px-3 py-1 text-green-800 text-base md:text-lg">${plant.category}</div>
                             <div class="font-bold text-lg md:text-xl">৳${plant.price}</div>
                         </div>
                         <div class="card-actions mt-2"><button class="btn bg-green-800 hover:bg-green-900 text-white rounded-3xl w-full text-2xl font-normal" onclick="addToCart('${plant.name}','${plant.price}')"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
@@ -145,7 +145,7 @@ function updateCartDisplay() {
 }
 
 
-// set active category
+// modal details
 
 function showDetails(plantId) {
 
@@ -161,9 +161,10 @@ function showDetails(plantId) {
             modalBody.innerHTML = `
             <h3 class="font-bold text-2xl mb-2">${data.plants.name}</h3>
             <img src="${data.plants.image}" alt="Image" class="rounded-xl h-60 w-full object-cover mb-4 " />
-            <p class="text-justify mb-2"><span class="font-semibold">Description:</span> ${data.plants.description}</p>
-            <p><i class="fa-solid fa-bangladeshi-taka-sign"></i> <span class="font-semibold">Price:</span> ৳${data.plants.price}</p>
-            <p class="mt-2"><i class="fa-solid fa-tag"></i> <span class="font-semibold">Category:</span> ${data.plants.category}</p>
+            <p class="mt-2 mb-2"><i class="fa-solid fa-tag"></i> <span class="font-semibold">Category:</span> ${data.plants.category}</p>
+            <p class="mb-2"><i class="fa-solid fa-bangladeshi-taka-sign"></i> <span class="font-semibold">Price:</span> ৳${data.plants.price}</p>
+            <p class="text-justify mb-4"><span class="font-semibold">Description:</span> ${data.plants.description}</p>
+        
             <div class="flex justify-end mt-4">
             <button class="btn rounded-3xl" onclick="document.getElementById('plant-modal').classList.remove('modal-open')">Close</button>
             </div>
