@@ -97,6 +97,8 @@ They are enclosed by backticks (``) instead of single or double quotes.
 - Template literals make string creation easier, cleaner, and more readable, especially when combining variables or writing multi-line strings. They replace messy concatenation with a simpler, modern syntax.
 
 
+----
+
 
 ## Thank You
 
