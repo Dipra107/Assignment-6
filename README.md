@@ -1,6 +1,6 @@
 # Programming Hero Batch-12
 ## Assignment 6 – Questions and Answers
-###Name: Dipra Sarker
+##Name: Dipra Sarker
 
 
 -----------
